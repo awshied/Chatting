@@ -11,7 +11,7 @@ export const arcjetProtection = async (req, res, next) => {
           message:
             "Batas penggunaan udah kebanyakan nih. Jadi baru bisa dicoba lagi lain waktu 🥺",
         });
-      } else if (decision.reason.isBot) {
+      } else if (decision.reason.isBot()) {
         return res.status(403).json({ message: "Akses untuk bot ditolak!" });
       } else {
         return res.status(403).json({
