@@ -16,7 +16,7 @@ export const signup = async (req, res) => {
     if (password.length < 6) {
       return res
         .status(400)
-        .json({ message: "Passwordnya harus minimal ada 6 karakter ☠️" });
+        .json({ message: "Passwordnya harus minimal ada 6 karakter 🥶" });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
