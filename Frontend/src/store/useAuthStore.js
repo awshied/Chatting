@@ -55,7 +55,18 @@ export const useAuthStore = create((set) => ({
       toast.success("Jangan lupa mampir lagi kapan2 🥹");
     } catch (error) {
       toast.error("Waduh, ga bisa logout bre ⚠️");
-      console.error("Kesalahan ga bisa logout:", error);
+      console.error("Kesalahan ga bisa keluar:", error);
+    }
+  },
+
+  updateProfile: async (data) => {
+    try {
+      const res = await axiosInstance.put("/auth/update-profile", data);
+      set({ authUser: res.data });
+      toast.success("Cieee komuknya ganti 🗿");
+    } catch (error) {
+      console.error("Kesalahan ga bisa perbarui komuk:", error);
+      toast.error(error.response.data.message);
     }
   },
 }));
