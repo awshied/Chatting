@@ -12,7 +12,7 @@ function NoChatsFound() {
       <div>
         <h4 className="text-slate-200 font-medium mb-1">Belum ada obrolan</h4>
         <p className="text-slate-400 text-sm px-6">
-          Mau buka chat baru? Pilih kontak dari tab kontak aja
+          Mau buka chat baru? Pilih kontak dari daftar kontakmu aja
         </p>
       </div>
       <button
